@@ -1,4 +1,4 @@
-ar movies_filtered = [];
+var movies_filtered = [];
 
 var actors = []
 var awards = []
