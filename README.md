@@ -2,7 +2,8 @@
 
 
 [Group github repo](https://github.com/vasmarm/Movie-Hawks)  
-[Heroku Launch](https://obscure-bastion-66936.herokuapp.com/)
+[Heroku Launch](https://obscure-bastion-66936.herokuapp.com/)\
+[Data Source](https://www.kaggle.com/tmdb/tmdb-movie-metadata) 
 ***
 
 ### Data Wrangling
@@ -21,12 +22,35 @@ The second movie aspect that needed updating was the awards and nominations. Thi
 
 The visualizations were created using Plotly. 
 
+-- __Ratings__ -- \
 The first chart is a simple bar graph with each bar representing a rating from a different source, grouped for each movie. The x-axis contains the title of the movie, the y-axis displays the rating value .There was some simple scaling to get IMDB ratings out of 100 to match the others. 
 
+
+<p align="center">
+  <img src="images/ratings_nolan.PNG">
+</p>
+
+***
+
+-- __Financial__ -- \
 The second visualization is a "bubble" chart used to display financial information for the selected movies. The chart is essentially a scatter plot depicting Return on Investment. On the y-axis is Revenue, x-axis has Budget and the points or "bubbles" sizes correspond to the average of the viewer ratings from all three sources. Additionally, a mouse hover can be used to see the exact value for a bubble. 
 
+-
+
+<p align="center">
+  <img src="images/financial_adventure.PNG">
+</p>
+
+***
+
+-- __Success Factors__ -- \
 The most interesting visualization is a 3d scatter plot that combines all three factors of success. Each axis contains a factor: ROI, Viewer Rating and Awards & Nomations. So the most successful movies would be in the highest closest corner-- the highest values for all three factors. With a click and drag the graph can be rotated, and again hover shows exact values for each factor. 
 
+
+
+<p align="center">
+  <img src="images/movie_magic.png">
+</p>
 
 
 
