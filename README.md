@@ -5,7 +5,7 @@
 [Heroku Launch](https://obscure-bastion-66936.herokuapp.com/)
 ***
 
-### Data Munging
+### Data Wrangling
 
 The movie data was presented to me from the database as movie objects. My task was to filter these movies based on user input and write functions to format the data for plot generation. 
 
@@ -18,6 +18,16 @@ The viewer rating data for each movie came as a dictionary of three ratings sour
 The second movie aspect that needed updating was the awards and nominations. This came as a string, take Toy Story 3 for example: "Won 2 Oscars. Another 59 wins & 91 nominations." We decided to generate a single value that represented all awards and nominations together. The function extract_awards() pulls the numbers from each movie's awards string and sums them together then pushes to a list called number_awards. So the row in number_awards that corresponds to Toy Story 3 would have the value 152. Now, all of the data is represented in lists corresponding to the movie aspect and correclty formatted for use in visualizations. 
 
 ### Visualizations
+
+The visualizations were created using Plotly. 
+
+The first chart is a simple bar graph with each bar representing a rating from a different source, grouped for each movie. The x-axis contains the title of the movie, the y-axis displays the rating value .There was some simple scaling to get IMDB ratings out of 100 to match the others. 
+
+The second visualization is a "bubble" chart used to display financial information for the selected movies. The chart is essentially a scatter plot depicting Return on Investment. On the y-axis is Revenue, x-axis has Budget and the points or "bubbles" sizes correspond to the average of the viewer ratings from all three sources. Additionally, a mouse hover can be used to see the exact value for a bubble. 
+
+The most interesting visualization is a 3d scatter plot that combines all three factors of success. Each axis contains a factor: ROI, Viewer Rating and Awards & Nomations. So the most successful movies would be in the highest closest corner-- the highest values for all three factors. With a click and drag the graph can be rotated, and again hover shows exact values for each factor. 
+
+
 
 
 
